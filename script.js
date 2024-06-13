@@ -14,14 +14,14 @@ function hasPlayerWonTheRound(player, computer) {
 
   function getRoundResults(userOption) {
     const computerResult = getRandomComputerResult();
-    if (hasPlayerWonTheRound === true) {
-      playerScore ++;
-      return `"Player wins!" ${userOption} " beats " ${computerResult} " !"`
-    } else if (hasPlayerWonTheRound === !true || !false) {
-      return `It's a tie! Both chose  ${userOption} !`
+  
+    if (hasPlayerWonTheRound(userOption, computerResult)) {
+      playerScore++;
+      return `Player wins! ${userOption} beats ${computerResult}`;
+    } else if (computerResult === userOption) {
+      return `It's a tie! Both chose ${userOption}`;
     } else {
-      return `"Computer wins! " ${computerResult} " beats " ${userOption} " !"`
-      computerScore ++;
+      computerScore++;
+      return `Computer wins! ${computerResult} beats ${userOption}`;
     }
-   
   }
