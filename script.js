@@ -80,4 +80,3 @@ paperBtn.addEventListener("click", function () {
 scissorsBtn.addEventListener("click", function () {
   showResults("Scissors");
 });
-
